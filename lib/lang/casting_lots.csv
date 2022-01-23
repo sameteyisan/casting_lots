@@ -1,0 +1,34 @@
+Key,English|en|us,Turkish|tr|tr
+appName,Casting Lots,Kura Çek
+candidates_deleted,Candidate field deleted,Aday alanı silindi
+candidate,Candidate,Aday
+add_candidate,Add Candidate,Aday Ekle
+add,Add,Ekle
+clear_added,Delete Added Candidates,Eklenen Adaylar Silindi.
+nothing_added,No Candidate Added Yet,Henüz Aday Eklenmedi
+candidates,Candidates,Adaylar
+lot_name,Lot Name,Kura Adı
+define_name,Define a Name ,İsim Ver
+lot_saved,Lot is Saved,Kura Kaydedildi.
+define,Define,Belirle
+save_lot,Save The Lot,Kurayı Kaydet
+start_lots,Start The Cut Lots,Kurayı Başlat
+candidate_not_entered,Enter a Candidate.,Bir Aday Girin.
+choice_question,How many candidates will be selected from @value candidates?,@value aday arasından kaç aday seçilecek?
+continue,Continue,Devam Et
+results,Results,Sonuçlar
+cancel,Cancel,İptal
+show_lots,Show My Lots,Kuralarımı Göster
+clear,Clear,Temizle
+added_candidate_count,Added Candidate Count: ,Eklenen Aday Sayısı: 
+save,Save,Kaydet
+enter_valid_value,Please enter a valid value.,Lütfen geçerli bir değer girin.
+enter_lot_name,Enter Lot Name.,Kura Adı Giriniz.
+already_exists,This candidate already exists.,Bu aday zaten var.
+number_candidate,Number of candidates,Aday sayısı
+my_lots,My Lots,Kuralarım
+no_lots_found,No Registered Lots Found Yet,Henüz Kaydedilen Bir Kura Yok
+lot_deleted,Lot is Deleted.,Kura Silindi.
+cannot_have,"Candidate Cannot Have "","" In The Name.","Aday adında "","" olamaz."
+try_again,Try Again,Yeni Bir Kura Çek
+new_chance,New Chance,Kurayı Yeniden Çek
