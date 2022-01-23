@@ -12,11 +12,9 @@ import 'package:get/get.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
 
-// ignore: must_be_immutable
 class HomeScreen extends GetView<CastingController> {
-  HomeScreen({Key? key}) : super(key: key);
-  TextEditingController controllerCandidate = TextEditingController();
-  TextEditingController controllerField = TextEditingController();
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +42,7 @@ class HomeScreen extends GetView<CastingController> {
         child: Column(
           children: [
             CustomTextField(
-              textEditingController: controllerCandidate,
+              textEditingController: controller.controllerCandidate,
               hintText: "candidate_not_entered".tr,
               showPrefix: true,
               numberOrString: true,
@@ -167,12 +165,12 @@ class HomeScreen extends GetView<CastingController> {
         ),
         onPressed: () async {
           if (text == "add".tr) {
-            final cont = controllerCandidate.text.trim();
+            final cont = controller.controllerCandidate.text.trim();
             if (cont.isNotEmpty) {
               if (!cont.contains(",")) {
                 if (!controller.candidateList.contains(cont)) {
                   controller.candidateList.add(cont);
-                  controllerCandidate.clear();
+                  controller.controllerCandidate.clear();
                 } else {
                   showToast("already_exists".tr);
                 }
@@ -209,13 +207,13 @@ class HomeScreen extends GetView<CastingController> {
             _td.insertTask(
               TaskModel(
                 kuraList: send,
-                name: controllerField.text.trim(),
+                name: controller.controllerField.text.trim(),
               ),
             );
             Get.back();
             showToast("lot_saved".tr);
           } else if (text == "continue".tr) {
-            final cont = controllerField.text.trim();
+            final cont = controller.controllerField.text.trim();
             if (cont.isNotEmpty) {
               try {
                 int contN = int.parse(cont);
@@ -266,7 +264,7 @@ class HomeScreen extends GetView<CastingController> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomTextField(
-                    textEditingController: controllerField,
+                    textEditingController: controller.controllerField,
                     hintText: "number_candidate".tr,
                     showPrefix: false,
                     numberOrString: false,
@@ -280,7 +278,7 @@ class HomeScreen extends GetView<CastingController> {
             ),
           );
         },
-      ).whenComplete(() => controllerField.clear());
+      ).whenComplete(() => controller.controllerField.clear());
 
   Future<String?> get saveLots => showDialog<String>(
         context: Get.context!,
@@ -302,7 +300,7 @@ class HomeScreen extends GetView<CastingController> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomTextField(
-                    textEditingController: controllerField,
+                    textEditingController: controller.controllerField,
                     hintText: "lot_name".tr,
                     showPrefix: false,
                     numberOrString: true,
@@ -316,5 +314,5 @@ class HomeScreen extends GetView<CastingController> {
             ),
           );
         },
-      ).whenComplete(() => controllerField.clear());
+      ).whenComplete(() => controller.controllerField.clear());
 }
